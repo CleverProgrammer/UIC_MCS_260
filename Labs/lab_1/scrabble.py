@@ -26,6 +26,12 @@ SCRABBLE_POINTS = {
 }
 
 def scrabble(word):
+    """
+    >>> scrabble('equalize')
+    76
+    :param word: str
+    :return: int
+    """
     score = sum([SCRABBLE_POINTS[key] for letter in word for key in SCRABBLE_POINTS if letter in key])
     if len(word) >= 7:
         score += 50
