@@ -1,3 +1,9 @@
+"""
+MCS 260 Project Two by Rafeh Qazi
+Modified: September 2016
+Program: Calculate average hourly maximum customer volume.
+"""
+
 from random import randrange
 
 
