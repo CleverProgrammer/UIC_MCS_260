@@ -14,7 +14,9 @@ def ave_max_calc(C, H, D):
     Simulates a business with customers, hours, and days.
     Outputs the average max hourly customer volume.
     """
+    # Counter for getting most common, numpy for averaging, and loops for given customers and days.
     return numpy.mean([Counter([randrange(0, H) for _ in range(C)]).most_common()[0][1] for _ in range(D)])
+
 
 if __name__ == '__main__':
     print("Hello, welcome to my average maximum hourly customer value calculator!")
