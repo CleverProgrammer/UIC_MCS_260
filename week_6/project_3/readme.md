@@ -15,4 +15,4 @@ by the frequency of the word.")
 >>> word_tower()
 ```
 
-![img](https://www.evernote.com/l/AVidYi8RBUlKS5rv6qVhLVv3oQVbYd2G1aw)
+![img](https://www.evernote.com/l/AVidYi8RBUlKS5rv6qVhLVv3oQVbYd2G1awB/image.png)
