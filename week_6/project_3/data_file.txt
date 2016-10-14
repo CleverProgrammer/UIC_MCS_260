@@ -1,1 +1,1 @@
-This this this this is absolutely crazy and let us see how badass this turns out bro.
+This is the string that the word tower will be made from. Each word in the string will be a layer in the tower, with the size of the word determined by the frequency of the word.
