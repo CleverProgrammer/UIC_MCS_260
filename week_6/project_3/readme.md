@@ -8,11 +8,9 @@ word in the string will be a layer in the tower, with the size of the word deter
 by the frequency of the word.")
 
 >>> word_freq_dict()
-{’with’: 1, ’that’: 1, ’tower’: 2, ’each’: 1, ’a’: 1, ’size’: 1, ’made’: 1, ’the’: 8,
-’word’: 4, ’by’: 1, ’of’: 2, ’determined’: 1, ’this’: 1, ’is’: 1, ’in’: 2,
-’frequency’: 1, ’will’: 2, ’layer’: 1, ’be’: 2, ’from’: 1, ’string’: 2}
+{'a': 1,'be': 2,'by': 1,'determined': 1,'each': 1,'frequency': 1,'from': 1,'in': 2,'is': 1,'layer': 1,'made': 1,'of': 2,'size': 1,'string': 2,'that': 1,'the': 8,'this': 1,'tower': 2,'will': 2,'with': 1,'word': 4}
 
 >>> word_tower()
 ```
 
-![img](https://www.evernote.com/l/AVidYi8RBUlKS5rv6qVhLVv3oQVbYd2G1aw)
+![img](https://www.evernote.com/l/AVidYi8RBUlKS5rv6qVhLVv3oQVbYd2G1awB/image.png)
