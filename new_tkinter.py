@@ -1,4 +1,4 @@
-import week_2.project_1
+from week_2.project_1 import project_1 as Project_1
 from tkinter import Tk, Button, Label, Entry
 
 
@@ -30,6 +30,8 @@ class TorchelliApp(Tk):
         e2 = self.entry2.get()
         e3 = self.entry3.get()
         print(e1, e2, e3)
+        print(Project_1.G)
+
 
 
 app = TorchelliApp()
