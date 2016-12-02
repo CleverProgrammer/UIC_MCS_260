@@ -1,19 +1,36 @@
-from tkinter import Tk, Canvas, messagebox
-
-window = Tk()
-canvas = Canvas(window, width=1024, height=768, bg='blue')
-canvas.pack()
+import week_2.project_1
+from tkinter import Tk, Button, Label, Entry
 
 
-def say_hello(event):
-    x = str(event.x)
-    y = str(event.y)
-    print(x, y)
-    messagebox.showinfo(message='hello')
+class TorchelliApp(Tk):
+    def __init__(self):
+        Tk.__init__(self)
+        self.entry = Entry(self)
+        self.entry2 = Entry(self)
+        self.entry3 = Entry(self)
+
+        self.label1 = Label(self, text="Area")
+        self.label2 = Label(self, text="Area")
+        self.label3 = Label(self, text="Area")
+
+        self.label1.pack()
+        self.entry.pack()
+
+        self.label2.pack()
+        self.entry2.pack()
+
+        self.label3.pack()
+        self.entry3.pack()
+
+        self.button = Button(self, text="Calculate Now!", command=self.on_button)
+        self.button.pack()
+
+    def on_button(self):
+        e1 = self.entry.get()
+        e2 = self.entry2.get()
+        e3 = self.entry3.get()
+        print(e1, e2, e3)
 
 
-canvas.bind('<Button-1>', say_hello)
-print(dir(canvas))
-
-if __name__ == '__main__':
-    window.mainloop()
+app = TorchelliApp()
+app.mainloop()
