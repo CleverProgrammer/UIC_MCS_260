@@ -27,25 +27,25 @@ def calculate(drain_time_secs):
 
     # Handle all string formatting cases of having seconds, minutes, or hours.
     if seconds and minutes and hours:
-        print('{} hours {} minutes and {} seconds'.format(int(hours), int(minutes), int(seconds)))
+        return '{} hours {} minutes and {} seconds'.format(int(hours), int(minutes), int(seconds))
 
     elif seconds and minutes:
-        print('{} minutes and {} seconds'.format(int(minutes), int(seconds)))
+        return '{} minutes and {} seconds'.format(int(minutes), int(seconds))
 
     elif minutes and hours:
-        print('{} hours and {} minutes'.format(int(hours)), int(minutes))
+        return '{} hours and {} minutes'.format(int(hours), int(minutes))
 
     elif seconds and hours:
-        print('{} hours and {} seconds'.format(int(hours), int(seconds)))
+        return '{} hours and {} seconds'.format(int(hours), int(seconds))
 
     elif hours:
-        print('{} hours'.format(int(hours)))
+        return '{} hours'.format(int(hours))
 
     elif minutes:
-        print('{} minutes'.format(int(minutes)))
+        return '{} minutes'.format(int(minutes))
 
     elif seconds:
-        print('{} seconds'.format(int(seconds)))
+        return '{} seconds'.format(int(seconds))
 
 
 if __name__ == '__main__':

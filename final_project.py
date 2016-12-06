@@ -1,5 +1,5 @@
 from week_2.project_1 import project_1 as Project_1
-from tkinter import Tk, Button, Label, Entry
+from tkinter import Tk, Button, Label, Entry, messagebox
 
 
 class TorchelliApp(Tk):
@@ -29,9 +29,10 @@ class TorchelliApp(Tk):
         a = float(self.entry.get())
         A = float(self.entry2.get())
         H = float(self.entry3.get())
-        print(a, A, H)
+
         drain_time_secs = Project_1.drain_time_secs(a, A, H)
-        print(Project_1.calculate(drain_time_secs))
+        result = Project_1.calculate(drain_time_secs)
+        messagebox.showinfo('Result', result)
 
 
 app = TorchelliApp()
