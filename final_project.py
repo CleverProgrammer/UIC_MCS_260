@@ -1,50 +1,38 @@
-"""
-MCS 260 Project One by Rafeh Qazi
-Modified: September 2016
-Program: Calculate drainage time
-"""
-import math
+from week_2.project_1 import project_1 as Project_1
+from tkinter import Tk, Button, Label, Entry
 
 
-# Gravity constant
-G = 9.80665
+class TorchelliApp(Tk):
+    def __init__(self):
+        Tk.__init__(self)
+        self.entry = Entry(self)
+        self.entry2 = Entry(self)
+        self.entry3 = Entry(self)
 
-# Welcome prompt
-print('Hello, welcome to my drain time calculator!')
+        self.label1 = Label(self, text="Area")
+        self.label2 = Label(self, text="Area")
+        self.label3 = Label(self, text="Area")
 
-# Take in user input
-def user_input():
-    a = float(input('Give the cross-sectional area of the hole the liquid is draining out of: '))
-    A = float(input('Give the horizontal cross-sectional area of the container: '))
-    H = float(input('Give the height of the liquid above the hole it is draining out of: '))
+        self.label1.pack()
+        self.entry.pack()
 
-# Drain time formula
-def drain_time_secs(a, A, H):
-    return ((2 * A) / a) * math.sqrt((2 * H) / G)
+        self.label2.pack()
+        self.entry2.pack()
 
-# Use divmod to get quotient and remainder
-def calculate_time(drain_time_secs):
-    minutes, seconds = divmod(drain_time_secs, 60)
-    hours, minutes = divmod(minutes, 60)
+        self.label3.pack()
+        self.entry3.pack()
 
-    # Handle all string formatting cases of having seconds, minutes, or hours.
-    if seconds and minutes and hours:
-        print('{} hours {} minutes and {} seconds'.format(int(hours), int(minutes), int(seconds)))
+        self.button = Button(self, text="Calculate Now!", command=self.on_button)
+        self.button.pack()
 
-    elif seconds and minutes:
-        print('{} minutes and {} seconds'.format(int(minutes), int(seconds)))
+    def on_button(self):
+        e1 = self.entry.get()
+        e2 = self.entry2.get()
+        e3 = self.entry3.get()
+        print(e1, e2, e3)
+        print(Project_1.G)
 
-    elif minutes and hours:
-        print('{} hours and {} minutes'.format(int(hours)), int(minutes))
 
-    elif seconds and hours:
-        print('{} hours and {} seconds'.format(int(hours), int(seconds)))
 
-    elif hours:
-        print('{} hours'.format(int(hours)))
-
-    elif minutes:
-        print('{} minutes'.format(int(minutes)))
-
-    elif seconds:
-        print('{} seconds'.format(int(seconds)))
+app = TorchelliApp()
+app.mainloop()
