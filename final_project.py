@@ -26,13 +26,16 @@ class TorchelliApp(Tk):
         self.button.pack()
 
     def on_button(self):
-        a = float(self.entry.get())
-        A = float(self.entry2.get())
-        H = float(self.entry3.get())
+        try:
+            a = float(self.entry.get())
+            A = float(self.entry2.get())
+            H = float(self.entry3.get())
 
-        drain_time_secs = Project_1.drain_time_secs(a, A, H)
-        result = Project_1.calculate(drain_time_secs)
-        messagebox.showinfo('Result', result)
+            drain_time_secs = Project_1.drain_time_secs(a, A, H)
+            result = Project_1.calculate(drain_time_secs)
+            messagebox.showinfo('Result', result)
+        except:
+            messagebox.showerror("Error", "Make sure you are using floating point numbers.")
 
 
 app = TorchelliApp()
