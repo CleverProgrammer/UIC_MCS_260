@@ -9,9 +9,9 @@ class TorchelliApp(Tk):
         self.entry2 = Entry(self)
         self.entry3 = Entry(self)
 
-        self.label1 = Label(self, text="Area")
-        self.label2 = Label(self, text="Area")
-        self.label3 = Label(self, text="Area")
+        self.label1 = Label(self, text="a")
+        self.label2 = Label(self, text="A")
+        self.label3 = Label(self, text="H")
 
         self.label1.pack()
         self.entry.pack()
@@ -26,11 +26,12 @@ class TorchelliApp(Tk):
         self.button.pack()
 
     def on_button(self):
-        e1 = self.entry.get()
-        e2 = self.entry2.get()
-        e3 = self.entry3.get()
-        print(e1, e2, e3)
-        print(Project_1.G)
+        a = float(self.entry.get())
+        A = float(self.entry2.get())
+        H = float(self.entry3.get())
+        print(a, A, H)
+        drain_time_secs = Project_1.drain_time_secs(a, A, H)
+        print(Project_1.calculate(drain_time_secs))
 
 
 
