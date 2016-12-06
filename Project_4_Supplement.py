@@ -1,8 +1,9 @@
 from Project_4 import *
 
-# The directory class is a helper class so I can search for patients and 
+
+# The Directory class is a helper class so I can search for patients and
 # treatments (but not insurance, its already included in the patient data).
-class directory:
+class Directory:
     def __init__(self):
         self.treatment_list = []
         self.patient_list = []
@@ -27,20 +28,21 @@ class directory:
         print("That treatment is not on file...")
         return 0
 
+
 # Here I am instantiating some class objects to use in my simulation
 # treatment class inputs: name and cost
-treat_1 = treatment("Python bite treatment", 100)
-treat_2 = treatment("Java poisoning", 1500)
-treat_3 = treatment("Vitamin C++ deficiency", 10)
+treat_1 = Treatment("Python bite treatment", 100)
+treat_2 = Treatment("Java poisoning", 1500)
+treat_3 = Treatment("Vitamin C++ deficiency", 10)
 # insurance class inputs: name, copay, and deductible
-ins_1 = insurance("Red Cross Red Shield", 25, 2000)
-ins_2 = insurance("Divided Health", 35, 1000)
+ins_1 = Insurance("Red Cross Red Shield", 25, 2000)
+ins_2 = Insurance("Divided Health", 35, 1000)
 # patient class inputs: name and insurance plan
-pat_1 = patient("Bob", ins_1)
-pat_2 = patient("Jeane", ins_2)
+pat_1 = Patient("Bob", ins_1)
+pat_2 = Patient("Jeane", ins_2)
 
-# Here I am adding the treatments and patients to the directory
-direc = directory()
+# Here I am adding the treatments and patients to the Directory
+direc = Directory()
 direc.add_treatment(treat_1)
 direc.add_treatment(treat_2)
 direc.add_treatment(treat_3)
@@ -110,4 +112,3 @@ while answer != 3:
                     treat = direc.search_treatment(name2)
                 if name2 != 'q':
                     current.order_treatment(treat)
-                    
